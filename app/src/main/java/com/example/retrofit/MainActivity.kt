@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        var recuest = API.build().loadPokemon(8)
+        var recuest = API.build().loadPokemon(10)
         recuest.enqueue(object : Callback<PokemonResponse> {
 
 
