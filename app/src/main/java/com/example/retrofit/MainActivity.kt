@@ -3,13 +3,12 @@ package com.example.retrofit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.retrofit.Data.API
-import com.example.retrofit.Data.PokemonResponse
+import com.example.retrofit.Model.APIConexion
+import com.example.retrofit.Model.Models.PokemonResponse
 import com.example.retrofit.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        var recuest = API.build().loadPokemon(10)
+        var recuest = APIConexion.build().loadPokemon(10)
         recuest.enqueue(object : Callback<PokemonResponse> {
 
 

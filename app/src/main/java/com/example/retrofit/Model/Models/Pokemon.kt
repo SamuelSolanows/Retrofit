@@ -1,4 +1,4 @@
-package com.example.retrofit.Data
+package com.example.retrofit.Model.Models
 
 data class PokemonResponse(
     var count: Int,

@@ -1,14 +1,12 @@
-package com.example.retrofit.Data
+package com.example.retrofit.Model
 
-import retrofit2.Call
+import com.example.retrofit.Model.Interfaces.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Query
 
 
 //aqui se usa en forma singleton para poder acceder a los metodos si necesidad de instanciar el objeto
-object API {
+object APIConexion {
 
     //construyo loa conexxion con la api
     private var builder = Retrofit.Builder()
@@ -21,8 +19,8 @@ object API {
 
 
     //Hago el constructor que es lo que voy a llamar para usar la api y sus metodos
-    fun build(): Rutas {
-        return builder.create(Rutas::class.java)
+    fun build(): ApiService {
+        return builder.create(ApiService::class.java)
     }
 
 }
